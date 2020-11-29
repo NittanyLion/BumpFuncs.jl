@@ -1,6 +1,5 @@
 module Bump
 
-# Write your package code here.
 
 
 
@@ -79,10 +78,12 @@ function ddbump( x::V, x0::V, r::V )
 end
 
 
-x = -0.74
-println( bump(x), " ", dbump(x), " ", ddbump(x) )
-println( bump(x, 0.0, 1.0), " ", dbump(x, 0.0, 1.0), " ", ddbump(x, 0.0, 1.0) )
-println( bump(-0.11, 0.0, 0.25), " ", dbump(-0.11, 0.0, 0.25), " ", ddbump(-0.11, 0.0, 0.25) )
-println( bump([-0.11; -0.11], [0.0,0.0], [0.25,0.25]), " ", dbump([-0.11; -0.11],[0.0,0.0],[0.25,0.25]), " ", ddbump([-0.11; -0.11], [0.0,0.0], [0.25,0.25]) )
+#~ x = -0.74
+#~ println( bump(x), " ", dbump(x), " ", ddbump(x) )
+#~ println( bump(x, 0.0, 1.0), " ", dbump(x, 0.0, 1.0), " ", ddbump(x, 0.0, 1.0) )
+#~ println( bump(-0.11, 0.0, 0.25), " ", dbump(-0.11, 0.0, 0.25), " ", ddbump(-0.11, 0.0, 0.25) )
+#~ println( bump([-0.11; -0.11], [0.0,0.0], [0.25,0.25]), " ", dbump([-0.11; -0.11],[0.0,0.0],[0.25,0.25]), " ", ddbump([-0.11; -0.11], [0.0,0.0], [0.25,0.25]) )
 
 end
+
+
