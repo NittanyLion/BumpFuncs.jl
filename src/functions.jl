@@ -8,13 +8,13 @@ function ugly(x::F)
     1.0 / ( x^2 - 1.0 )
 end
 
+
 # scalar functions without arguments
 """
     bump(x::AbstractFloat)
     
 Compute a bump function at x.
 """
-
 function bump(x::F)
     ifelse( abs(x) < 1.0, exp( ugly( x ) ), 0.0 )
 end
@@ -24,7 +24,6 @@ end
 
 Compute the first derivative of a bump function at x.
 """
-
 function dbump(x::F)
     if abs(x) >= 1.0 return 0.0 end
     u = ugly(x)
@@ -36,7 +35,6 @@ end
 
 Compute the second derivative of a bump function at x.
 """
-
 function ddbump(x::F)
     if abs(x) >= 1.0 return 0.0 end
     u = ugly(x)
@@ -48,7 +46,6 @@ end
     
 Compute a bump function at (x-x0) / r.
 """
-
 function bump( x::F, x0::F, r::F )
     @testrpositive
     bump( ( x - x0 ) / r )
@@ -59,7 +56,6 @@ end
 
 Compute the first derivative of a bump function at (x-x0) / r.
 """
-
 function dbump( x::F, x0::F, r::F )
     @testrpositive
     dbump( ( x - x0 ) / r ) / r
@@ -71,8 +67,6 @@ end
 
 Compute the second derivative of a bump function at (x-x0) / r.
 """
-
-
 function ddbump( x::F, x0::F, r::F )
     @testrpositive
     ddbump( ( x- x0 ) /r ) / r^2
@@ -93,7 +87,6 @@ end
     
 Compute a bump function at the vector x.
 """
-
 function bump( x::V )
     ifelse( sumsqr(x) < 1.0, exp( ugly( x ) ), 0.0 )
 end
@@ -103,8 +96,6 @@ end
     
 Compute the first derivative of a bump function at the vector x.
 """
-
-
 function dbump( x::V )
     if sumsqr(x) >= 1.0 return 0.0 end
     u = ugly( x )
@@ -117,7 +108,6 @@ end
     
 Compute the second derivative of a bump function at the vector x.
 """
-
 function ddbump( x::V )
     if sumsqr(x) >= 1.0 return 0.0 end
     u = ugly( x )
@@ -142,7 +132,6 @@ end
     
 Compute a vector bump function at x centered at x0 scaled by r (element-wise)
 """
-
 function bump( x::V, x0::V, r::V )
     @sanitycheck
     bump( ( x - x0 ) ./ r )
@@ -153,8 +142,6 @@ end
     
 Compute the gradient of a vector bump function at x centered at x0 scaled by r (element-wise)
 """
-
-
 function dbump( x::V, x0::V, r::V )
      @sanitycheck
     dbump( ( x - x0 ) ./ r ) ./ r
@@ -165,8 +152,6 @@ end
     
 Compute the Hessian of a vector bump function at x centered at x0 scaled by r (element-wise)
 """
-
-
 function ddbump( x::V, x0::V, r::V )
      @sanitycheck
     ddbump( ( x- x0 ) ./r ) ./ ( r .* r )

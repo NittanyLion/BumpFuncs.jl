@@ -9,6 +9,7 @@ CurrentModule = Bump
 
 ```@autodocs
 Modules = [Bump]
+#Pages = ["functions.jl"]
 ```
 
 
