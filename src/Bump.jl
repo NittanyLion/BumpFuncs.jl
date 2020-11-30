@@ -1,16 +1,22 @@
+__precompile__(true)
+
+
+
 module Bump
 
 F = AbstractFloat;  V = Vector{<:F}
 
 
 export 
-    bump
-    dbump
+    bump,
+    dbump,
     ddbump
-    
-    
+ 
 include("functions.jl")
 
+
+   
+    
 
 
 end
