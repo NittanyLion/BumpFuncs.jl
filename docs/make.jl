@@ -1,4 +1,4 @@
-push!(LOAD_PATH,"../src/")
+#~ push!(LOAD_PATH,"../src/")
 using Documenter, Bump
 
 println( names(Bump; imported=true) )
@@ -19,7 +19,7 @@ makedocs(
 )
 #~ makedocs(sitename="My Documentation")
 
-deploydocs(;
+deploydocs(
     repo="github.com/NittanyLion/Bump.jl.git"
 )
 
