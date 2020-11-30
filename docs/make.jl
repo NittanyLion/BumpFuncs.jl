@@ -17,7 +17,7 @@ makedocs(
         "Home" => "index.md",
     ],
 )
-makedocs(sitename="My Documentation")
+#~ makedocs(sitename="My Documentation")
 
 deploydocs(;
     repo="github.com/NittanyLion/Bump.jl.git",
