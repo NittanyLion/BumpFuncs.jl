@@ -20,9 +20,7 @@ makedocs(
 #~ makedocs(sitename="My Documentation")
 
 deploydocs(;
-    repo="github.com/NittanyLion/Bump.jl.git",
-    target="build",
-    deps = nothing,
+    repo="github.com/NittanyLion/Bump.jl.git"
 )
 
 
