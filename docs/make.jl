@@ -35,8 +35,7 @@ makedocs(
     # linkcheck = true,
     format = format,
     pages = [
-        "Home" => "index.md",
-        "LICENSE.md",
+        "Home" => "index.md"
     ]
 )
 
