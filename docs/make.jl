@@ -1,5 +1,5 @@
+push!(LOAD_PATH, pwd() )
 using Documenter, Bump
-
 
 
 format = Documenter.HTML(edit_link = "master",
