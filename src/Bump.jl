@@ -1,7 +1,6 @@
 __precompile__(true)
 
 
-
 module Bump
 
 F = AbstractFloat;  V = Vector{<:F}
