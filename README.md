@@ -10,6 +10,7 @@ and zero otherwise.
 
 Please click on the documentation below for additional details.
 
+
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://NittanyLion.github.io/Bump.jl/stable)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://NittanyLion.github.io/Bump.jl/dev)
 [![Build Status](https://github.com/NittanyLion/Bump.jl/workflows/CI/badge.svg)](https://github.com/NittanyLion/Bump.jl/actions)
