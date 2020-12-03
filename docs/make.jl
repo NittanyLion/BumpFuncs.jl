@@ -18,7 +18,6 @@ makedocs(
 )
 
 
-
 deploydocs(
     repo="github.com/NittanyLion/Bump.jl.git",
     versions = ["stable" => "v^", "v#.#", devurl => devurl]
