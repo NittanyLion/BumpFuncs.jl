@@ -1,4 +1,4 @@
-F = AbstractFloat;  V = Vector{<:F}
+F = Number;  V = Vector{<:F}
 
 macro testrpositive()
     esc( :( if r == 0 && x == 0 throw(DomainError("x=r=0.0", "zero divided by zero")) end ) )
@@ -11,7 +11,7 @@ end
 
 # scalar functions without arguments
 """
-    bump(x::AbstractFloat)
+    bump(x::Number)
     
 Compute a bump function at x.
 """
@@ -20,7 +20,7 @@ function bump(x::F)
 end
 
 """
-    dbump(x::AbstractFloat)
+    dbump(x::Number)
 
 Compute the first derivative of a bump function at x.
 """
@@ -31,7 +31,7 @@ function dbump(x::F)
 end
 
 """
-    ddbump(x::AbstractFloat)
+    ddbump(x::Number)
 
 Compute the second derivative of a bump function at x.
 """
@@ -42,7 +42,7 @@ function ddbump(x::F)
 end
 
 """
-    bump(x::AbstractFloat, x0::AbstractFloat, r::AbstractFloat)
+    bump(x::Number, x0::Number, r::Number)
     
 Compute a bump function at (x-x0) / r.
 """
@@ -52,7 +52,7 @@ function bump( x::F, x0::F, r::F )
 end
 
 """
-    dbump(x::AbstractFloat, x0::AbstractFloat, r::AbstractFloat)
+    dbump(x::Number, x0::Number, r::Number)
 
 Compute the first derivative of a bump function at (x-x0) / r.
 """
@@ -63,7 +63,7 @@ end
 
 
 """
-    ddbump(x::AbstractFloat, x0::AbstractFloat, r::AbstractFloat)
+    ddbump(x::Number, x0::Number, r::Number)
 
 Compute the second derivative of a bump function at (x-x0) / r.
 """
@@ -83,7 +83,7 @@ function ugly( x::V )
 end
 
 """
-    bump(x::Vector{AbstractFloat})
+    bump(x::Vector{Number})
     
 Compute a bump function at the vector x.
 """
@@ -92,7 +92,7 @@ function bump( x::V )
 end
 
 """
-    dbump(x::Vector{AbstractFloat})
+    dbump(x::Vector{Number})
     
 Compute the first derivative of a bump function at the vector x.
 """
@@ -104,7 +104,7 @@ end
 
 
 """
-    ddbump(x::Vector{AbstractFloat})
+    ddbump(x::Vector{Number})
     
 Compute the second derivative of a bump function at the vector x.
 """
@@ -128,7 +128,7 @@ macro sanitycheck()
 end
 
 """
-    bump(x::Vector{AbstractFloat}, x0::Vector{AbstractFloat}, r::Vector{AbstractFloat})
+    bump(x::Vector{Number}, x0::Vector{Number}, r::Vector{Number})
     
 Compute a vector bump function at x centered at x0 scaled by r (element-wise)
 """
@@ -138,7 +138,7 @@ function bump( x::V, x0::V, r::V )
 end
 
 """
-    dbump(x::Vector{AbstractFloat}, x0::Vector{AbstractFloat}, r::Vector{AbstractFloat})
+    dbump(x::Vector{Number}, x0::Vector{Number}, r::Vector{Number})
     
 Compute the gradient of a vector bump function at x centered at x0 scaled by r (element-wise)
 """
@@ -148,7 +148,7 @@ function dbump( x::V, x0::V, r::V )
 end
 
 """
-    ddbump(x::Vector{AbstractFloat}, x0::Vector{AbstractFloat}, r::Vector{AbstractFloat})
+    ddbump(x::Vector{Number}, x0::Vector{Number}, r::Vector{Number})
     
 Compute the Hessian of a vector bump function at x centered at x0 scaled by r (element-wise)
 """
