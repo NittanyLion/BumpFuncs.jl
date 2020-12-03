@@ -13,6 +13,7 @@ The formula used for the bump function without scale and location normalizations
 and zero otherwise.
 
 
+
 ```@index
 ```
 
