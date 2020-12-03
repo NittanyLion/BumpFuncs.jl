@@ -8,7 +8,7 @@ This package delivers bump functions, i.e. functions on the unit sphere that hav
 
 The formula used for the bump function without scale and location normalizations is simply
 
-  exp( 1 / (||x||^2-1)) if ||x||<1
+  exp( 1 / ( ||x||^2 - 1)  ) if ||x||<1
   
 and zero otherwise.
 
