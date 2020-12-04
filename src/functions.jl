@@ -1,4 +1,4 @@
-F = Number;  V = Vector{<:F}
+F = Real;  V = Vector{<:F}
 
 macro testrpositive()
     esc( :( if r == 0 && x == 0 throw(DomainError("x=r=0.0", "zero divided by zero")) end ) )
@@ -11,7 +11,7 @@ end
 
 # scalar functions without arguments
 """
-    bump(x::Number)
+    bump(x::Real)
     
 Compute a bump function at x.
 """
@@ -20,7 +20,7 @@ function bump(x::F)
 end
 
 """
-    dbump(x::Number)
+    dbump(x::Real)
 
 Compute the first derivative of a bump function at x.
 """
@@ -31,7 +31,7 @@ function dbump(x::F)
 end
 
 """
-    ddbump(x::Number)
+    ddbump(x::Real)
 
 Compute the second derivative of a bump function at x.
 """
@@ -42,7 +42,7 @@ function ddbump(x::F)
 end
 
 """
-    bump(x::Number, x0::Number, r::Number)
+    bump(x::Real, x0::Real, r::Real)
     
 Compute a bump function at (x-x0) / r.
 """
@@ -52,7 +52,7 @@ function bump( x::F, x0::F, r::F )
 end
 
 """
-    dbump(x::Number, x0::Number, r::Number)
+    dbump(x::Real, x0::Real, r::Real)
 
 Compute the first derivative of a bump function at (x-x0) / r.
 """
@@ -63,7 +63,7 @@ end
 
 
 """
-    ddbump(x::Number, x0::Number, r::Number)
+    ddbump(x::Real, x0::Real, r::Real)
 
 Compute the second derivative of a bump function at (x-x0) / r.
 """
@@ -83,7 +83,7 @@ function ugly( x::V )
 end
 
 """
-    bump(x::Vector{Number})
+    bump(x::Vector{Real})
     
 Compute a bump function at the vector x.
 """
@@ -92,7 +92,7 @@ function bump( x::V )
 end
 
 """
-    dbump(x::Vector{Number})
+    dbump(x::Vector{Real})
     
 Compute the first derivative of a bump function at the vector x.
 """
@@ -104,7 +104,7 @@ end
 
 
 """
-    ddbump(x::Vector{Number})
+    ddbump(x::Vector{Real})
     
 Compute the second derivative of a bump function at the vector x.
 """
@@ -128,7 +128,7 @@ macro sanitycheck()
 end
 
 """
-    bump(x::Vector{Number}, x0::Vector{Number}, r::Vector{Number})
+    bump(x::Vector{Real}, x0::Vector{Real}, r::Vector{Real})
     
 Compute a vector bump function at x centered at x0 scaled by r (element-wise)
 """
@@ -138,7 +138,7 @@ function bump( x::V, x0::V, r::V )
 end
 
 """
-    dbump(x::Vector{Number}, x0::Vector{Number}, r::Vector{Number})
+    dbump(x::Vector{Real}, x0::Vector{Real}, r::Vector{Real})
     
 Compute the gradient of a vector bump function at x centered at x0 scaled by r (element-wise)
 """
@@ -148,7 +148,7 @@ function dbump( x::V, x0::V, r::V )
 end
 
 """
-    ddbump(x::Vector{Number}, x0::Vector{Number}, r::Vector{Number})
+    ddbump(x::Vector{Real}, x0::Vector{Real}, r::Vector{Real})
     
 Compute the Hessian of a vector bump function at x centered at x0 scaled by r (element-wise)
 """
