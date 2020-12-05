@@ -1,5 +1,5 @@
 push!(LOAD_PATH, pwd() )
-using Documenter, Bump
+using Documenter, BumpFuncs
 
 
 format = Documenter.HTML(edit_link = "master",
@@ -8,8 +8,8 @@ format = Documenter.HTML(edit_link = "master",
 )
 
 makedocs(
-    modules = [Bump],
-    sitename = "Bump.jl",
+    modules = [BumpFuncs],
+    sitename = "BumpFuncs.jl",
     authors = "Joris Pinkse",
     format = format,
     pages = [
@@ -19,7 +19,7 @@ makedocs(
 
 
 deploydocs(
-    repo="github.com/NittanyLion/Bump.jl.git"
+    repo="github.com/NittanyLion/BumpFuncs.jl.git"
 #    versions = ["stable" => "v^", "v#.#", devurl => devurl]
 )
 

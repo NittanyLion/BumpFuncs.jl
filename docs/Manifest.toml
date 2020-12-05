@@ -3,10 +3,10 @@
 [[Base64]]
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 
-[[Bump]]
+[[BumpFuncs]]
 path = ".."
 uuid = "9920abf5-d2d3-40c3-98dc-d6c533a1aad6"
-version = "0.1.0"
+version = "1.0.0"
 
 [[Dates]]
 deps = ["Printf"]

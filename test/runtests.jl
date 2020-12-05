@@ -1,7 +1,7 @@
-using Bump
+using BumpFuncs
 using Test
 
-@testset "Bump.jl" begin
+@testset "BumpFuncs.jl" begin
     @test bump(0.0) ≈ 1.0 / ℯ
     @test bump([0.0; 0.0]) ≈ 1.0 / ℯ
     @test bump( 3.5, 3.5, 1.0 ) ≈ 1.0 / ℯ

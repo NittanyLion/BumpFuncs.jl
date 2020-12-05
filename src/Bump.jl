@@ -1,7 +1,7 @@
 __precompile__(true)
 
 
-module Bump
+module BumpFuncs
 
 
 

@@ -1,7 +1,7 @@
-name = "Bump"
+name = "BumpFuncs"
 uuid = "9920abf5-d2d3-40c3-98dc-d6c533a1aad6"
 authors = ["Joris Pinkse"]
-version = "0.1.1"
+version = "1.0.0"
 
 [compat]
 julia = "1"
