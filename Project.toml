@@ -1,7 +1,7 @@
 name = "Bump"
 uuid = "9920abf5-d2d3-40c3-98dc-d6c533a1aad6"
 authors = ["Joris Pinkse"]
-version = "0.1.0"
+version = "0.1.1"
 
 [compat]
 julia = "1"
