@@ -7,6 +7,7 @@ format = Documenter.HTML(edit_link = "master",
                          assets = String[],
 )
 
+
 makedocs(
     modules = [BumpFuncs],
     sitename = "BumpFuncs.jl",
